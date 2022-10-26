@@ -15,7 +15,7 @@ body,html {
 
 @font-face {
     font-family: myFont;
-    src: url(font.otf);
+    src: url(Content/font/Common_font.OTF);
 }
 
 #header {
