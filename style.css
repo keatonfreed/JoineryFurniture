@@ -24,26 +24,27 @@ body,html {
     background:hsla(0, 0%, 25%,1);
     width:100%;
     height: fit-content;
-    min-height:100px;
+    min-height:50px;
     display: flex;
     /* box-shadow: 0px 3px 10px hsl(0, 0%, 30%,0.9); */
 }
 
 
-#mainlogo {
+#main_logo {
     padding: 15px;
     padding-left: 50px;
 }
 
-#mainlogo img {
-    width:70px;
-    cursor:pointer;
+#main_logo img {
+    height: 70px;
+    cursor: pointer;
 }
 
 #brand_name {
     color: white;
     font-family: SFProBold;
-    font-size: 50px;
+    font-size: 40px;
+    line-height: 92%;
     align-items: center;
     justify-content: center;
     display: flex;
