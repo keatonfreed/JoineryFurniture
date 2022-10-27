@@ -1,17 +1,4 @@
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-
-body,html {
-    position: absolute;
-    inset:0;
-    width:100%;
-    height: 100%;
-}
-
-
+/* LOADING */
 
 @font-face {
     font-family: SFProBold;
@@ -28,24 +15,46 @@ body,html {
     src: url(Content/font/SF_Pro_Display_Regular.otf);
 }
 
+
+
+/* RESET */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body,html {
+    position: absolute;
+    inset:0;
+    width:100%;
+    height: 100%;
+    background-color:#1f1d1a
+}
+
+
+
+/* HEADER */
+
 #header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
     height: fit-content;
     min-height:50px;
-    margin: 0;
-    background-color: #1f1d1a;
     /* box-shadow: 0px 3px 10px hsl(0, 0%, 30%,0.9); */
 }
 
+
+/* logo */
 
 #logo {
     display: flex;
     height:fit-content;
     align-items: center;
-    margin-right: auto; 
+    margin-right: 120px; 
 }
 
 #mainLogo {
@@ -53,80 +62,84 @@ body,html {
     cursor: pointer;
 }
 
-#brand_name {
+#brandName {
     color: white;
     font-family: SFProBold, sans-serif;
     word-spacing:500vh;
-    font-size: 35px;
+    font-size: 33px;
     align-items: center;
     display: flex;
     margin-left:15px;
     width:min-content;
 }
 
-/* #navbar {
+
+/* navbar */
+
+#nav {
+    width:100%;
     display:flex;
-    flex-direction: row;
     align-items: center;
-    gap: 30px;
-} */
+    justify-content: flex-end;
+}
 
-#navBar {
+#nav ul {
+    padding-left:8%;
+    width:min(100%,1150px) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navLink {
+    padding:0px 10px;
     list-style: none;
+   text-align: center;
+
 }
 
-#navBar li {
-   display: inline-block;
-   padding: 0px 25px; 
-}
-
-#navBar li a {
+.navLink a {
     text-decoration: none;
     color: #edf0f1;
     font-family: SFProReg, sans-serif;
     font-weight: 500;
-    font-size:20px; 
-    transition: all 0.3 ease 0s;
+    font-size:18px; 
+    transition: color 0.1s ease-in-out;
 }
 
-#navBar li a:hover {
+.navLink a:hover {
     color: #0088a9;
 }
 
+
+/* contact */
+
 #contactButton {
-    padding: 9px 25px;
+    padding: 11px 26px;
+    margin-left:20px;
     color: #edf0f1;
     font-family: SFProReg, sans-serif;
     font-size: 17px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: hsl(192, 100%, 33%);
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3 ease 0s;    
+    transition: background-color 0.1s ease-in;    
 }
 
 #contactButton:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: hsla(192, 100%, 33%, 0.7);
 }
 
-/* .navLink a {
-    font-family: SFProReg,sans-serif;
-    font-weight: 500;
-    text-decoration: none;
-    color: #edf0f1;
-    font-size:18px;
-    letter-spacing:0.1em;
-} */
 
-#banner {
-    width:100%;
-    height:500%;
-    background:#1f1d1a
-}
 
+
+/* CONTENT */
 
 #title {
     padding:30px;
+    width:min-content;
     position: absolute;
     translate:-50% -50%;
     top:50%;
@@ -142,8 +155,4 @@ body,html {
 
 #title:hover {
     color: gray
-}
-
-#box {
-    background:grey
 }
