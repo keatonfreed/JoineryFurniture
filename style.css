@@ -25,63 +25,98 @@ body,html {
 
 @font-face {
     font-family: SFProReg;
-    src: url(Content/font/SFProDisplayRegular.otf);
+    src: url(Content/font/SF_Pro_Display_Regular.otf);
 }
 
 #header {
-    position: fixed;
     display: flex;
-    justify-content: space-between;
-    width:100%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 5%;
     height: fit-content;
     min-height:50px;
-    display: flex;
+    margin: 0;
+    background-color: #1f1d1a;
     /* box-shadow: 0px 3px 10px hsl(0, 0%, 30%,0.9); */
 }
 
 
 #logo {
-    padding: 20px 40px;
     display: flex;
     height:fit-content;
     align-items: center;
+    margin-right: auto; 
 }
 
 #mainLogo {
-    height: 70px;
+    height: 80px;
     cursor: pointer;
 }
 
 #brand_name {
     color: white;
-    font-family: SFProBold;
+    font-family: SFProBold, sans-serif;
     word-spacing:500vh;
     font-size: 35px;
     align-items: center;
     display: flex;
     margin-left:15px;
-    width:min-content
+    width:min-content;
 }
 
-#navbar {
+/* #navbar {
     display:flex;
     flex-direction: row;
     align-items: center;
-    gap:30px
+    gap: 30px;
+} */
+
+#navLinksList {
+    list-style: none;
 }
 
-.navLink {
-    list-style: none
+#navLinksList li {
+   display: inline-block;
+   padding: 0px 25px; 
 }
 
-.navLink a {
+#navLinksList li a {
     text-decoration: none;
-    color:white;
-    font-size:max(min(1vw,20px),16px);
-    /* font-size:15px; */
-    font-family: SFProReg,sans-serif;
-    letter-spacing:0.1em;
+    color: #edf0f1;
+    font-family: SFProReg, sans-serif;
+    font-weight: 500;
+    font-size:20px; 
+    transition: all 0.3 ease 0s;
 }
+
+#navLinksList li a:hover {
+    color: #0088a9;
+}
+
+#contactButton {
+    padding: 9px 25px;
+    color: #edf0f1;
+    font-family: SFProReg, sans-serif;
+    font-size: 17px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;    
+}
+
+#contactButton:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* .navLink a {
+    font-family: SFProReg,sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #edf0f1;
+    font-size:18px;
+    letter-spacing:0.1em;
+} */
 
 #banner {
     width:100%;
@@ -111,9 +146,4 @@ body,html {
 
 #box {
     background:grey
-}
-
-
-body {
-    background: rgb(112, 67, 0);
 }
