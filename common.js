@@ -1,4 +1,50 @@
 
+
+
+let headerLinks = ["Custom Furniture", "Customized Pieces", "Charcuteries Board", "How Pieces are made"];
+let linksStr = ""
+
+headerLinks.forEach((link) => {
+    linksStr += `<li class="navLink"><a href="#">${link}</a></li>`
+})
+
+let header = `<header id="header">
+<div class="navExtra">
+    <div class="dropdownSelect">
+        <div class="dropdownTitle">More</div>
+        <img src="./Content/icons/dropdown.png" class="dropdownIcon"></img>
+    </div>
+    <ul class="dropdownContents">
+        ${linksStr.replace(/navLink/g, "dropdownItem")}
+    </ul>
+</div>
+
+<a href="#" id="logo">
+    <img src="Content/Images/Logo/Client_Logo/mainLogo.png" alt="#" id="mainLogo"></img>
+    <h1 id="brandName">Joinery Furniture</h1>
+</a>
+
+
+
+<nav class="nav">
+    <ul class="navLinks">
+        <li class="navLink"><a href="#">Home</a></li>
+        ${linksStr}
+    </ul>
+    <a href="contact.html"><button id="contactButton">Contact</button></a>
+</nav>
+
+</header>`
+
+
+
+let headerEl = document.createElement('header');
+
+document.body.insertBefore(headerEl, document.body.firstChild);
+headerEl.outerHTML = header;
+
+
+
 navLinks = document.getElementById("navLinks")
 navExtra = document.querySelectorAll(".navExtra")
 
@@ -29,7 +75,7 @@ navExtra.forEach(object => {
                 menu.classList.remove('menu-open');
                 menu.classList.add('menu-close');
 
-                option.forEach(option => {
+                options.forEach(option => {
                     option.classList.remove('dropdownItem-active')
                 })
 
@@ -67,3 +113,4 @@ resize()
 window.addEventListener('resize', (event) => {
     resize(event)
 });
+
