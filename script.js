@@ -5,8 +5,6 @@ navExtra = document.querySelectorAll(".navExtra")
 
 
 navExtra.forEach(object => {
-
-
     const select = object.querySelector('.dropdownSelect');
     const selected = object.querySelector('.dropdownSelect .dropdownTitle');
     const caret = object.querySelector('.dropdownSelect .dropdownIcon');
@@ -45,6 +43,15 @@ navExtra.forEach(object => {
 
 
 function resize(event) {
+    navExtra.forEach(object => {
+        const menu = object.querySelector('.dropdownContents');
+        menu.classList.remove('menu-open')
+        menu.classList.remove('menu-close')
+        const caret = object.querySelector('.dropdownSelect .dropdownIcon');
+        caret.classList.remove('dropdownIcon-active');
+
+    })
+
     event = event || false
 
     if (event) {
