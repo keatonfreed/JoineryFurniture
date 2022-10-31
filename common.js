@@ -19,6 +19,7 @@ let header = `<header id="header">
     </ul>
 </div>
 
+
 <a href="#" id="logo">
     <img src="Content/Images/Logo/Client_Logo/mainLogo.png" alt="#" id="mainLogo"></img>
     <h1 id="brandName">Joinery Furniture</h1>

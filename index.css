@@ -1,0 +1,23 @@
+
+
+/* CONTENT */
+
+#title {
+    padding:30px;
+    width:min-content;
+    position: absolute;
+    translate:-50% -50%;
+    top:50%;
+    left:50%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-family: SFProBold, sans-serif;
+    font-size: 100px;
+    transition: 100ms color;
+    cursor: pointer;
+}
+
+#title:hover {
+    color: gray
+}
