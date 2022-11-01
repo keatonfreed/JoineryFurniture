@@ -58,10 +58,10 @@ body,html {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    height: 120px;
+    height: 105px;
     min-height: 50px;
     background:rgba(0,0,0, 0.4);
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(10px);
     /* box-shadow: 0px 3px 10px hsl(0, 0%, 30%,0.9); */
 }
 
@@ -111,7 +111,7 @@ body,html {
 
 .nav .navLinks {
     padding-left: 9%;
-    width: min(100%,1100px) ;
+    width: min(100%,1000px) ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,7 +129,7 @@ body,html {
     color: var(--navTextColor);
     font-family: var(--navFont), sans-serif;
     font-weight: 500;
-    font-size: clamp(15.5px, 1.2vw, 20px);
+    font-size: clamp(17px, 1vw, 20px);
     transition: color 0.1s ease-in-out;
 }
 
@@ -146,12 +146,12 @@ body,html {
 /* contact */
 
 #contactButton {
-    padding: 11px 26px;
+    padding: 9px 20px;
     margin-left: 20px;
     color: #edf0f1;
     font-family: SFProReg, sans-serif;
-    font-size: clamp(16px, 1.2vw, 20px);
-    background-color: hsl(192, 100%, 33%);
+    font-size: clamp(17px, 1vw, 20px);
+    background-color: rgb(0, 113, 227);
     border: none;
     border-radius: 50px;
     cursor: pointer;
