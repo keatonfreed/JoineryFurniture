@@ -4,7 +4,7 @@
 function email() {
 
 
-    let preFilled = `This is a pre-written email to Joinery Furniture, feel free to remove or change what is here. =Please submit your request below:==Give a brief summary of what you would like:====Please Describe the dimensions of the item:====How would you like us to contact you?===`
+    let preFilled = `This is a pre-written email to Joinery Furniture, feel free to remove or change what is here. =Please tell us more about your request below:==Give a brief summary of what you would like:====Please describe the rough dimensions of the item:====How would you like us to contact you?===`
 
     preFilled = preFilled.replace(/=/g, "%0D")
 

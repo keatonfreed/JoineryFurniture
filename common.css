@@ -37,8 +37,8 @@ body,html {
     inset: 0;
     width: 100%;
     height: 100%;
-    background-color: #1f1d1a;
-    overflow-x: hidden;
+    background-color: #181614;
+    overflow-x:visible;
 }
 
 /* body {
@@ -51,7 +51,7 @@ body,html {
 /* HEADER */
 
 #header {
-    position: sticky;
+    position: fixed;
     top:0;
     width:100%;
     display: flex;
@@ -60,8 +60,24 @@ body,html {
     padding: 20px 5%;
     height: 105px;
     min-height: 50px;
-    background:rgba(0,0,0, 0.4);
+    background-color:rgba(0,0,0,0.8);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    transition:background-color 50ms ease-in;
+    
+    /* box-shadow: 0px 3px 10px hsl(0, 0%, 30%,0.9); */
+}
+
+#footer {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    margin-top:30px;
+    height: 150px;
+    background-color:rgba(0,0,0,0.7);
+    
     /* box-shadow: 0px 3px 10px hsl(0, 0%, 30%,0.9); */
 }
 
@@ -79,7 +95,13 @@ body,html {
     display: flex;
     height: fit-content;
     align-items: center;
-    margin-right: 80px; 
+    margin-right: 20px; 
+    cursor: pointer;
+}
+
+
+#footerLogo {
+    height: 100px;
     cursor: pointer;
 }
 
@@ -102,6 +124,8 @@ body,html {
 /* navbar */
 
 .nav {
+    /* margin-left:22px; */
+    /* padding-left:min(22px,10%); */
     width: 100%;
     display: flex;
     align-items: center;
@@ -110,16 +134,17 @@ body,html {
 
 
 .nav .navLinks {
-    padding-left: 9%;
+    /* padding-left: 9%; */
     width: min(100%,1000px) ;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 
 .navLink {
-    padding: 0px 10px;
+    margin-left:clamp(25px,4%,80px);
+    /* padding: 0px 10px; */
     list-style: none;
     text-align: center;
 }
@@ -129,7 +154,7 @@ body,html {
     color: var(--navTextColor);
     font-family: var(--navFont), sans-serif;
     font-weight: 500;
-    font-size: clamp(17px, 1vw, 20px);
+    font-size: clamp(18px, 1vw, 20px);
     transition: color 0.1s ease-in-out;
 }
 

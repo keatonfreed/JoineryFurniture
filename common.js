@@ -8,7 +8,8 @@ headerLinks.forEach((link) => {
     linksStr += `<li class="navLink"><a href="#">${link}</a></li>`
 })
 
-let header = `<header id="header">
+let header = `
+<header id="header">
 <div class="navExtra">
     <div class="dropdownSelect">
         <div class="dropdownTitle">More</div>
@@ -39,10 +40,26 @@ let header = `<header id="header">
 
 
 
+
 let headerEl = document.createElement('header');
 
 document.body.insertBefore(headerEl, document.body.firstChild);
 headerEl.outerHTML = header;
+
+
+let footer = `
+<footer id="footer">
+
+<div></div>
+<img src="Content/Images/Logo/Client_Logo/mainLogo.png" alt="#" id="footerLogo"></img>
+<div></div>
+
+</footer>`
+
+let footerEl = document.createElement('footer');
+
+document.body.appendChild(footerEl);
+footerEl.outerHTML = footer;
 
 
 
@@ -114,4 +131,14 @@ resize()
 window.addEventListener('resize', (event) => {
     resize(event)
 });
+
+window.addEventListener('scroll', (event) => { scroll(event) });
+
+function scroll(event) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").style.background = "rgba(0,0,0,0.5)";
+    } else {
+        document.getElementById("header").style.background = "rgba(0,0,0,0.8)";
+    }
+}
 
