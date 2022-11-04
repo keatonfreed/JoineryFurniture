@@ -30,7 +30,7 @@ let header = `
 
 <nav class="nav">
     <ul class="navLinks">
-        <li class="navLink"><a href="#">Home</a></li>
+        <li class="navLink"><a href="index.html">Home</a></li>
         ${linksStr}
     </ul>
     <a href="contact.html"><button id="contactButton">Contact</button></a>
