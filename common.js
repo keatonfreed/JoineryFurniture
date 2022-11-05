@@ -21,7 +21,7 @@ let header = `
 </div>
 
 
-<a href="#" id="logo">
+<a href="index.html" id="logo">
     <img src="Content/Images/Logo/Client_Logo/mainLogo.png" alt="#" id="mainLogo"></img>
     <h1 id="brandName">Joinery Furniture</h1>
 </a>

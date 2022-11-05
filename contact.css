@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: #0000ff;
     background: url(./Content/Images/Background/front.webp) no-repeat;
     background-size: 100%;
     background-position-y: -150px;
@@ -33,12 +34,7 @@
     font-size: 130px;
 }
 
-#main {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 #subtitle {
     /* padding:auto; */
@@ -50,7 +46,8 @@
 
 #emailDetails {
     width: 500px;
-    text-align: justify;
+    margin-top:20px;
+    text-align: center;
     color: rgb(161, 161, 161);
     font-family: SFProBold, sans-serif;
     font-size: 25px;    
