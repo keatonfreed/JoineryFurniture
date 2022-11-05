@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #0000ff;
-    background: url(./Content/Images/Background/front.webp) no-repeat;
+    /* background: url(./Content/Images/Background/front.webp) no-repeat; */
     background-size: 100%;
     background-position-y: -150px;
     height:800px;
@@ -16,6 +16,7 @@
 
 #main {
     /* border-top:5px solid rgb(31, 31, 31); */
+
 }
 
 
