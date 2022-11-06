@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joinery Furniture</title>
+    <link rel="stylesheet" href="boards.css">
+    <link rel="stylesheet" href="common.css">
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe-lightbox.esm.min.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#img-gallery',
+            children: 'a',
+            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.esm.min.js')
+        });
+        lightbox.init();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.min.css">
+    <!-- <script src="script.js" defer></script> -->
+</head>
+
+<body>
+    <script src="common.js" defer></script>
+
+
+
+
+    <div id="banner">
+        <!-- <img id="bannerImg" src="image_wood.png" alt="#"> -->
+        <div id="title">Charcuteries Boards</div>
+    </div>
+
+    <section>
+        <div id="subtitle">Perfect For Any Use!</div>
+        <div class="pswp-gallery pswp-gallery--single-column image--gallery" id="img-gallery">
+            <div class="darkenOverlay"></div>
+        </div>
+    </section>
+
+
+
+
+</body>
+
+</html>

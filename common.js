@@ -1,11 +1,13 @@
 
 
 
-let headerLinks = ["Custom Furniture", "Customized Pieces", "Charcuteries Board", "How Pieces are made"];
+
+
+let headerLinks = [["Custom Furniture", "./custom.html"], ["Customized Pieces", "./custom.html"], ["Charcuteries Board", "./boards.html"], ["How Pieces are made"]];
 let linksStr = ""
 
 headerLinks.forEach((link) => {
-    linksStr += `<li class="navLink"><a href="#">${link}</a></li>`
+    linksStr += `<li class="navLink"><a href="${link[1] || "#"}">${link[0]}</a></li>`
 })
 
 let header = `
@@ -49,11 +51,14 @@ headerEl.outerHTML = header;
 
 let footer = `
 <footer id="footer">
-
-<div></div>
 <img src="Content/Images/Logo/Client_Logo/mainLogo.png" alt="#" id="footerLogo"></img>
-<div></div>
-
+<div class="footerContact">
+<h1 class="footerTitle">Contact Us!</h1>
+<ul class="footerList">
+<li class="footerItem">Email: <a href="#" onclick="email()">joineryfurnituretest@gmail.com</a></li>
+<li class="footerItem">Call: <a href="#" onclick="email()">987-654-3210</a></li>
+</ul>
+</div>
 </footer>`
 
 let footerEl = document.createElement('footer');
@@ -143,3 +148,60 @@ function scroll(event) {
 }
 
 
+function email() {
+
+
+    let preFilled = `This is a pre-written email to Joinery Furniture, feel free to remove or change what is here. =Please tell us more about your request below:==Give a brief summary of what you would like:====Please describe the rough dimensions of the item:====How would you like us to contact you?===`
+
+    preFilled = preFilled.replace(/=/g, "%0D")
+
+
+    window.open(`https://mail.google.com/mail/u/0/?fs=1&to=joineryfurnituretest@gmail.com&su=Joinery Furniture Request&body=${preFilled}&tf=cm`)
+
+    // if(!(/(.+)@(.+){2,}\.(.+){2,}/.test(userEmail)) || !userText) {
+}
+
+
+
+
+
+
+let gallerys = document.querySelectorAll('.image--gallery')
+
+
+if (gallerys.length > 0) {
+    gallerys.forEach((gallery) => {
+        // gallery
+        let images = [];
+        function loadImage(index) {
+            index = index || 1;
+
+            let image = new Image();
+            // console.log(image);
+            image.onload = (image) => {
+                console.log("Image:", index, "Loaded!");
+                newImage = document.createElement("img");
+                newImage.src = image.path[0].src
+                newImage.style.width = `${newImage.width / 5}px`
+                newImage.style.height = `${newImage.height / 5}px`
+
+                newContainer = document.createElement("a");
+                newContainer.href = newImage.src;
+                newContainer.dataset.pswpWidth = `${newImage.width}`
+                newContainer.dataset.pswpHeight = `${newImage.height}`
+                newContainer.dataset.cropped = `true`
+                newContainer.classList.add('gallery--item')
+
+                newContainer.appendChild(newImage);
+                gallery.appendChild(newContainer);
+                loadImage(index + 1);
+            }
+            image.onerror = (image) => {
+                console.log("Image Loop Ended")
+            }
+            image.src = `./Content/Images/Gallerys/Pieces/img${index}.webp`
+        }
+
+        loadImage();
+    })
+}
