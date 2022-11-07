@@ -1,9 +1,9 @@
 
+let companyEmail = "joineryfurnituretest@gmail.com";
 
 
-
-
-let headerLinks = [["Custom Furniture", "./custom.html"], ["Customized Pieces", "./custom.html"], ["Charcuteries Board", "./boards.html"], ["How Pieces are made"]];
+// ["Custom Furniture", "./custom.html"], 
+let headerLinks = [["Customized Pieces", "./custom.html"], ["Charcuterie Boards", "./boards.html"], ["How Pieces are made"]];
 let linksStr = ""
 
 headerLinks.forEach((link) => {
@@ -35,7 +35,7 @@ let header = `
         <li class="navLink"><a href="index.html">Home</a></li>
         ${linksStr}
     </ul>
-    <a href="contact.html"><button id="contactButton">Contact</button></a>
+    <button onclick="document.location = './contact.html'" id="contactButton">Contact</button>
 </nav>
 
 </header>`
@@ -55,8 +55,8 @@ let footer = `
 <div class="footerContact">
 <h1 class="footerTitle">Contact Us!</h1>
 <ul class="footerList">
-<li class="footerItem">Email: <a href="#" onclick="email()">joineryfurnituretest@gmail.com</a></li>
-<li class="footerItem">Call: <a href="#" onclick="email()">987-654-3210</a></li>
+<li class="footerItem">Email: <a style="cursor:pointer" onclick="email(true)">joineryfurnituretest@gmail.com</a></li>
+<li class="footerItem">Call: <a style="cursor:pointer" href="tel:9876543210" onclick="">987-654-3210</a></li>
 </ul>
 </div>
 </footer>`
@@ -148,15 +148,20 @@ function scroll(event) {
 }
 
 
-function email() {
+function email(popup) {
 
+    popup = popup || false;
 
     let preFilled = `This is a pre-written email to Joinery Furniture, feel free to remove or change what is here. =Please tell us more about your request below:==Give a brief summary of what you would like:====Please describe the rough dimensions of the item:====How would you like us to contact you?===`
 
     preFilled = preFilled.replace(/=/g, "%0D")
 
 
-    window.open(`https://mail.google.com/mail/u/0/?fs=1&to=joineryfurnituretest@gmail.com&su=Joinery Furniture Request&body=${preFilled}&tf=cm`)
+    window.open(`https://mail.google.com/mail/u/0/?fs=1&to=${companyEmail}&su=Joinery Furniture Request&body=${preFilled}&tf=cm`)
+
+    if (popup && !document.querySelectorAll('#footer .footerItem')[0].innerHTML.includes("Gmail Didn't Work?")) {
+        document.querySelectorAll('#footer .footerItem')[0].innerHTML += ` <span style="font-size:0.8em; opacity:0.6;">(Gmail Didn't Work? Try <a href="mailto:${companyEmail}">This</a>!)</span>`
+    }
 
     // if(!(/(.+)@(.+){2,}\.(.+){2,}/.test(userEmail)) || !userText) {
 }

@@ -7,12 +7,13 @@
     align-items: center;
     flex-direction: column;
     flex-grow: 1;
-    --overlay:0.4;
+    --overlay:0.35;
     background-image:linear-gradient(rgba(0, 0, 0, var(--overlay)), rgba(0, 0, 0, var(--overlay))), url('./Content/Images/Background/boards.webp');
     background-repeat: repeat-y;
     background-size: 100%;
     background-position-y: 0px;
     height:800px;
+    --smallSize:-20px !important;
     /* height:100%; */
 }
 

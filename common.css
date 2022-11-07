@@ -39,7 +39,7 @@ body,html {
     inset: 0;
     width: 100%;
     height: 100%;
-    background-color: yellow;
+    background-color: rgb(44, 44, 44);
     overflow-x:clip;
     /* overflow-x:visible; */
 }
@@ -311,13 +311,14 @@ body,html {
 
 
 /* @media (max-width: 768px) { */
-@media only screen and (max-width: 1307px) {
+@media only screen and (max-width: 1107px) {
     /* Medium */
 
     #banner {
         background-size:1450px;
+        --smallSize:-150px;
         --backOffset:70px;
-        background-position:calc(50% + var(--backOffset)) -150px;
+        background-position:calc(50% + var(--backOffset)) var(--smallSize);
     }
     
     .nav {
@@ -361,8 +362,9 @@ body,html {
     /* Smaller */
     #banner {
         background-size:1200px;
+        --smallSize:-150px;
         --backOffset:80px;
-        background-position:calc(50% + var(--backOffset)) -150px;
+        background-position:calc(50% + var(--backOffset)) var(--smallSize);
         height:600px;
         display:flex;
         justify-content:center;
@@ -471,9 +473,10 @@ h1.subNotes {
 
 
 .image--gallery {
+    box-sizing: content-box;
     width:1200px;
     height:fit-content;
-    background-color:rgb(19, 19, 19);
+    background-color:rgb(49, 49, 49);
     display: flex;
     flex-direction: row;
     flex-wrap:wrap; 
@@ -481,6 +484,18 @@ h1.subNotes {
     overflow: hidden;
     border-radius:25px;
     position: relative;
+    box-shadow:0px 0px 10px 5px rgba(46, 46, 46,0.8);
+}
+
+@media screen and (max-width:1230px) {
+    .image--gallery {
+        width:800px;
+    }
+}
+@media screen and (max-width:850px) {
+    .image--gallery {
+        width:400px;
+    }
 }
 
 .image--gallery .darkenOverlay {
