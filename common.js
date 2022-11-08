@@ -202,6 +202,7 @@ if (gallerys.length > 0) {
                 loadImage(index + 1);
             }
             image.onerror = (image) => {
+                document.getElementById('subtitle').textContent = `Image Loop ENDED`;
                 console.log("Image Loop Ended")
             }
             image.src = `./Content/Images/Gallerys/Pieces/img${index}.webp`
