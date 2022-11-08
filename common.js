@@ -187,17 +187,21 @@ if (gallerys.length > 0) {
             document.getElementById('title').textContent = `Error 4`;
             // console.log(image);
             image.onload = (image) => {
-                document.getElementById('title').textContent = `Error 5s`;
+                document.getElementById('title').textContent = `Error 5h`;
                 console.log("Image:", index, "Loaded!");
                 // document.getElementById('title').textContent = `Happened`;
-                document.getElementById('subtitle').textContent = `${index} good, ${image.path[0]}`;
+                // document.getElementById('subtitle').textContent = `${index} good, ${image.path[0]}`;
                 newImage = document.createElement("img");
+                document.getElementById('title').textContent = `Error GGG`;
                 newImage.src = image.path[0].src
+                document.getElementById('title').textContent = `Error YYY`;
                 newImage.style.width = `${newImage.width / 5}px`
                 newImage.style.height = `${newImage.height / 5}px`
+                document.getElementById('title').textContent = `Error BBB`;
 
                 newContainer = document.createElement("a");
                 newContainer.href = newImage.src;
+                document.getElementById('title').textContent = `Error AAA`;
                 newContainer.dataset.pswpWidth = `${newImage.width}`
                 newContainer.dataset.pswpHeight = `${newImage.height}`
                 newContainer.dataset.cropped = `true`
@@ -205,8 +209,8 @@ if (gallerys.length > 0) {
 
                 newContainer.appendChild(newImage);
                 gallery.appendChild(newContainer);
+                document.getElementById('title').textContent = `Error FFF`;
                 loadImage(index + 1);
-                document.getElementById('title').textContent = `Error GGG`;
             }
             image.onerror = (image) => {
                 document.getElementById('subtitle').textContent = `Image Loop ENDED`;
