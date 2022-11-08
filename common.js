@@ -176,14 +176,18 @@ document.getElementById('title').textContent = `Thing`;
 
 
 if (gallerys.length > 0) {
+    document.getElementById('title').textContent = `Error 2`;
     gallerys.forEach((gallery) => {
+        document.getElementById('title').textContent = `Error 3`;
         // gallery
         let images = [];
         function loadImage(index) {
             index = index || 1;
             let image = new Image();
+            document.getElementById('title').textContent = `Error 4`;
             // console.log(image);
             image.onload = (image) => {
+                document.getElementById('title').textContent = `Error 5`;
                 console.log("Image:", index, "Loaded!");
                 // document.getElementById('title').textContent = `Happened`;
                 document.getElementById('subtitle').textContent = `${index} good, ${image.path[0]}`;
@@ -206,8 +210,10 @@ if (gallerys.length > 0) {
             image.onerror = (image) => {
                 document.getElementById('subtitle').textContent = `Image Loop ENDED`;
                 console.log("Image Loop Ended")
+                document.getElementById('title').textContent = `Error Big`;
             }
             image.src = `./Content/Images/Gallerys/Pieces/img${index}.webp`
+            document.getElementById('title').textContent = `Error Other`;
         }
 
         loadImage();
