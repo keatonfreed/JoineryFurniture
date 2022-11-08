@@ -185,7 +185,6 @@ if (gallerys.length > 0) {
             image.onload = (image) => {
                 console.log("Image:", index, "Loaded!");
                 document.getElementById('subtitle').textContent = `${index} good, ${image.path[0]}`;
-                document.getElementById('subtitle').textContent = `Image Loop ENDED`;
                 newImage = document.createElement("img");
                 newImage.src = image.path[0].src
                 newImage.style.width = `${newImage.width / 5}px`
