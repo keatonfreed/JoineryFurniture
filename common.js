@@ -1,5 +1,5 @@
 
-let companyEmail = "joineryfurnituretest@gmail.com";
+let companyEmail = "keaton@mfreed.com";
 
 
 // ["Custom Furniture", "./custom.html"], 
@@ -180,11 +180,11 @@ if (gallerys.length > 0) {
         let images = [];
         function loadImage(index) {
             index = index || 1;
-
             let image = new Image();
             // console.log(image);
             image.onload = (image) => {
                 console.log("Image:", index, "Loaded!");
+                document.getElementById('subtitle').textContent = `Image: ${index} Loaded!`;
                 newImage = document.createElement("img");
                 newImage.src = image.path[0].src
                 newImage.style.width = `${newImage.width / 5}px`
@@ -210,3 +210,4 @@ if (gallerys.length > 0) {
         loadImage();
     })
 }
+
