@@ -184,6 +184,7 @@ if (gallerys.length > 0) {
             // console.log(image);
             image.onload = (image) => {
                 console.log("Image:", index, "Loaded!");
+                document.getElementById('title').textContent = `Happened`;
                 document.getElementById('subtitle').textContent = `${index} good, ${image.path[0]}`;
                 newImage = document.createElement("img");
                 newImage.src = image.path[0].src
