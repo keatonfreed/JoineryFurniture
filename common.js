@@ -206,6 +206,7 @@ if (gallerys.length > 0) {
                 newContainer.appendChild(newImage);
                 gallery.appendChild(newContainer);
                 loadImage(index + 1);
+                document.getElementById('title').textContent = `Error GGG`;
             }
             image.onerror = (image) => {
                 document.getElementById('subtitle').textContent = `Image Loop ENDED`;
