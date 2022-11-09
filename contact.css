@@ -1,6 +1,5 @@
 
 
-
 /* CONTENT */
 
 #banner {
@@ -76,7 +75,8 @@ section {
 }
 
 #emailDetails {
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
     margin-top:10px;
     text-align: center;
     color: rgb(161, 161, 161);

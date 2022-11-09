@@ -1,0 +1,55 @@
+
+
+/* CONTENT */
+
+#banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    --overlay:0.35;
+    background-image:linear-gradient(rgba(0, 0, 0, var(--overlay)), rgba(0, 0, 0, var(--overlay))), url('./Content/Images/Background/howtest.webp');
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-position-y: 0px;
+    height:800px;
+    --smallSize:-20px !important;
+    /* height:100%; */
+}
+
+section {
+    --sectionHeight:fit-content !important;
+}
+
+
+/* #banner::after {
+    content: "";
+    width:100%;
+    height:100%;
+    background:red; 
+}*/
+
+#title {
+    margin: 310px 0 0;
+    width:fit-content;
+    padding-inline:35px;
+    /* position: absolute; */
+    /* translate:-50% -50%; */
+    /* top:50%;
+    left:50%; */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-family: SFProBold, sans-serif;
+    font-size: 130px;
+}
+
+
+#subtitle {
+    /* padding:auto; */
+    width:fit-content;
+    color: white;
+    font-family: SFProBold, sans-serif;
+    font-size: 70px;
+    margin-bottom:30px;
+}

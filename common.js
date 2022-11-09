@@ -1,9 +1,9 @@
 
-let companyEmail = "keaton@mfreed.com";
+let companyEmail = "joineryfurnituretest@gmail.com";
 
 
 // ["Custom Furniture", "./custom.html"], 
-let headerLinks = [["Customized Pieces", "./custom.html"], ["Charcuterie Boards", "./boards.html"], ["How Pieces are made"]];
+let headerLinks = [["Customized Pieces", "./custom.html"], ["Charcuterie Boards", "./boards.html"], ["How Pieces are Made", "./how.html"]];
 let linksStr = ""
 
 headerLinks.forEach((link) => {
@@ -137,8 +137,9 @@ window.addEventListener('resize', (event) => {
     resize(event)
 });
 
-window.addEventListener('scroll', (event) => { scroll(event) });
 
+
+window.addEventListener('scroll', (event) => { scroll(event) });
 function scroll(event) {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("header").style.background = "rgba(0,0,0,0.5)";
