@@ -18,7 +18,8 @@
 }
 
 section {
-    --sectionHeight:fit-content !important;
+    /* --sectionHeight:fit-content !important; */
+    --sectionHeight:200px !important;
 }
 
 
