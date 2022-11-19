@@ -439,24 +439,7 @@ section {
 }
 
 
-section.overlay {
-    /* height:100px; */
-    --offset:500px;
-    height:calc(min-content - var(--offset));
-}
 
-#reds {
-    display: flex;
-    /* flex-wrap: wrap; */
-}
-
-#red {
-    height:200px;
-    width:300px;
-    background:rgb(59, 59, 59);
-    border-radius: 10px;
-    margin:40px 20px;
-}
 
 h1.subNotes {
     margin-top:25px;
@@ -476,13 +459,14 @@ h1.subNotes {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width:65%;
+    width:80%;
     padding:60px 40px 45px;
     translate: 0px -135px;
     border-radius: 20px;
     /* border:2px solid rgba(255,255,255,0.1); */
     box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 0.5);
 }
+
 
 
 .image--gallery {

@@ -213,3 +213,22 @@ if (gallerys.length > 0) {
     })
 }
 
+
+let scrolls = document.querySelectorAll('.scroll--gallery')
+
+scrolls.forEach((gallery) => {
+    let scrollSpeed = gallery.dataset.scroll || -1;
+    let scrollPath = gallery.dataset.scrollPath || false;
+
+    galleryIndex = 1;
+
+    console.log("Got", scrollPath + "/img" + galleryIndex + ".webp", scrollSpeed)
+
+    if (scrollSpeed > 0 && scrollPath) {
+        gallery.style.backgroundImage = "url(" + scrollPath + "/img" + galleryIndex + ".webp" + ")"
+    } else if (scrollPath) {
+        gallery.style.backgroundImage = "url(" + scrollPath + ")"
+    } else {
+        gallery.style.backgroundImage = 'url("./Content/Images/Gallerys/img1.webp")'
+    }
+}) 
